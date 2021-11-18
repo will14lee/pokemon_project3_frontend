@@ -1,12 +1,13 @@
-import React from "react"
+import React from "react";
 import {useState, useEffect} from 'react';
+import { baseUrl } from "../globals";
 
 
 const CreatedPokemon= () =>{
     const [pokemon, setPokemon] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:9292/pokemons')
+        fetch(`${baseUrl}/pokemons`)
         .then(resp => resp.json())
         .then(data =>setPokemon(data))
     },[])
