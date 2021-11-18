@@ -29,13 +29,11 @@ const CreatedPokemonTrainers = () => {
             return pokemonTrainer.map(perChara=> PokemonTrainerForm(perChara))
         }
         return (
-            <div>
-                {/* <h2>Previously made Pokemon!</h2> */}
-            {/* { renderPokemon()}  */}
+            <div className="App">
                 <h2>Previously made Pokemon Trainers!</h2>
             { renderPokemonTrainers()}
         </div>
-    )
-  }
+    );
+  };
 
 export default CreatedPokemonTrainers;

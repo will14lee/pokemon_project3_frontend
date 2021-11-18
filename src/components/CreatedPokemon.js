@@ -12,7 +12,9 @@ const CreatedPokemon= () =>{
     },[])
 
     function PokemonForm(char){
+        
         const ptId= char.pokemon_trainer_id
+        
         function owned(){
             if (ptId) {
                 return  <p>Owned by Trainer</p>                  
@@ -21,6 +23,7 @@ const CreatedPokemon= () =>{
                 return  <p>Not owned by Trainer</p>                  
             }
         }
+
         return(
           <div>
               <p>Name: {char.name}</p>
@@ -38,23 +41,11 @@ const CreatedPokemon= () =>{
             return pokemon.map(perChara=> PokemonForm(perChara))
           }
 return (
-    <div>
+    <div className="App">
         <h2>Previously made Pokemon!</h2>
     { renderPokemon()} 
-        {/* <h2>Previously made Pokemon Trainers!</h2> */}
-    {/* { renderPokemonTrainers()} */}
+    </div>
+);
+};
 
-
-    
-</div>
-)
-}
-
-// const Home = () => {
-//     return (
-//       <div className="App">
-//       <p><CreatedPokemons/></p>
-//       </div>
-//   );
-// }
 export default CreatedPokemon;
