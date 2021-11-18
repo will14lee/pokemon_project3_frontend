@@ -1,6 +1,7 @@
 import './App.css';
 import NameAndGender from './components/NameAndGender';
 import StartJourney from './components/StartJourney';
+import FirstPokemon from './components/FirstPokemon';
 import Home from './components/Home';
 import {useState, useEffect} from 'react';
 
@@ -48,6 +49,7 @@ function App() {
     <div>
       <NameAndGender/>
       <StartJourney/>
+      <FirstPokemon/>
       <Home/>
     </div>
 
