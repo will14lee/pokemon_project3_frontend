@@ -7,7 +7,7 @@ const NameAndGender = () => {
     <header className= "header">
     </header>
     <h1>Hello, and welcome to the world of Pokemon!</h1>
-    <h2>???: My name is Professor Pine.</h2>
+    <h2>Proffessor Pine: My name is Professor Pine.</h2>
     <h3>Professor Pine: What is your name young lad?</h3>
     <p>You: My name is ...<input placeholder= "Red"></input> </p>
     <p>Professor Pine: Please tell me, what gender are you? </p>
