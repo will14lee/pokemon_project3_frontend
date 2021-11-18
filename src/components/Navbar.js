@@ -1,17 +1,17 @@
 import React from 'react'
-import Navlink from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar= () =>{
     return(
         <div className="App">
             <ul>
-                <li><Navlink to= "/">Home</Navlink></li>
-                <li><Navlinke to= "/start_adventure">Start Adventure</Navlinke></li>
-                <li><Navlink to= "/created_pokemon">Created Pokemon</Navlink></li>
-                <li><Navlink to= "/created_pokemon_trainers">Created Pokemon Trainers</Navlink></li>
+                <li><NavLink to= "/">Home</NavLink></li>
+                <li><NavLink to= "/start_adventure">Start Adventure</NavLink></li>
+                <li><NavLink to= "/created_pokemon">Created Pokemon</NavLink></li>
+                <li><NavLink to= "/created_pokemon_trainers">Created Pokemon Trainers</NavLink></li>
             </ul>
         </div>
     );
 };
-
+  
 export default Navbar
