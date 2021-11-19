@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import { baseUrl } from "../globals";
 
 
-const CreatedPokemon= () =>{
+const Pokemons= () =>{
     const [pokemon, setPokemon] = useState([])
 
     useEffect(() => {
@@ -56,4 +56,4 @@ return (
 );
 };
 
-export default CreatedPokemon;
+export default Pokemons;

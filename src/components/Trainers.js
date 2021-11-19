@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 import { baseUrl } from '../globals';
 
-const CreatedPokemonTrainers = () => {
+const Trainers = () => {
     const [pokemonTrainer, setPokemonTrainer]= useState([])
 
     useEffect(()=> {
@@ -13,11 +13,11 @@ const CreatedPokemonTrainers = () => {
     )
         
     function PokemonTrainerForm(char){
-        function editPokemonTrainer(){
-            return console.log(`Editing ${char.name}`)
+        function editPokemonTrainer(e){
+            return console.log(`Editing ${e.target.id}`)
         }
 
-        function deletePokemonTrainer()
+        function deletePokemonTrainer(e)
         {
             return console.log(`Deleting ${char.name}!`)
         }        
@@ -27,6 +27,8 @@ const CreatedPokemonTrainers = () => {
                 <p>Gender: {char.gender}</p>
                 <p>Pokemon: {char.pokemons.map(t=> t.name + " ")}</p>
                 <button onClick={editPokemonTrainer}>Edit</button>
+                <button id={char.id} onClick={editPokemonTrainer}>Edit</button>
+
                 <button onClick={deletePokemonTrainer}>Delete</button>
                 <hr></hr>
             </div>
@@ -44,4 +46,4 @@ const CreatedPokemonTrainers = () => {
     );
   };
 
-export default CreatedPokemonTrainers;
+export default Trainers;
