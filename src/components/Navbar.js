@@ -1,25 +1,19 @@
 import React from 'react'
-import { Link, Router} from 'react-router-dom';
-
-// const Navbar= () =>{
-//     return(
-//             <ul>
-//                 <li><Link to= "/">Home</Link></li>
-//                 <li><Link to= "/start_adventure">Start Adventure</Link></li>
-//                 <li><Link to= "/created_pokemon">Created Pokemon</Link></li>
-//                 <li><Link to= "/created_pokemon_trainers">Created Pokemon Trainers</Link></li>
-//             </ul>
-//     );
-// };
+import { NavLink } from 'react-router-dom';
   
 const Navbar = () => {
     return (
       <nav>
         <ul>
-          <li><a href= "http://localhost:3000/">Home</a></li>
+          <li><NavLink to="/" exact>Home</NavLink></li>
+          <li><NavLink to="/game/start" exact>Start Game</NavLink></li>
+          <li><NavLink to="/pokemon" exact>Created Pokemon</NavLink></li>
+          <li><NavLink to="/pokemon_trainer" exact>Created Pokemon Trainer</NavLink></li>
+
+          {/* <li><a href= "http://localhost:3000/">Home</a></li>
           <li><a href= "http://localhost:3000/new_game">New Game</a></li>
           <li><a href= "http://localhost:3000/created_pokemon">Created Pokemon</a></li>
-          <li><a href= "http://localhost:3000/created_pokemon_trainers">Created Pokemon Trainers</a></li>
+          <li><a href= "http://localhost:3000/created_pokemon_trainers">Created Pokemon Trainers</a></li> */}
         </ul>
       </nav>
     )

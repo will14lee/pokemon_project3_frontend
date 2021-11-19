@@ -13,13 +13,21 @@ const CreatedPokemonTrainers = () => {
     )
         
     function PokemonTrainerForm(char){
+        function editPokemonTrainer(){
+            return console.log(`Editing ${char.name}`)
+        }
+
+        function deletePokemonTrainer()
+        {
+            return console.log(`Deleting ${char.name}!`)
+        }        
         return(
             <div>
                 <p>Name: {char.name}</p>
                 <p>Gender: {char.gender}</p>
                 <p>Pokemon: {char.pokemons.map(t=> t.name + " ")}</p>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button onClick={editPokemonTrainer}>Edit</button>
+                <button onClick={deletePokemonTrainer}>Delete</button>
                 <hr></hr>
             </div>
             )

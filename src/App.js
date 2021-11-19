@@ -11,15 +11,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
-      <Navbar />
       <Router>
+      <Navbar />
         <Routes>
           <Route path= "/" element= { <Home/> }/>
-          <Route path= '/new_game' element= {<NewGame/>}/>
-          {/* <Route path= "/new_game" element= { <Home/> }/> */}
-          {/* <Route path= "/new_game" element= { <Hi/> }/> */}
-          <Route path= "/created_pokemon" element= { <CreatedPokemon />}/>
-          <Route path= "/created_pokemon_trainers" element= { <CreatedPokemonTrainers/>}/>
+          <Route path= '/game/start' element= {<NewGame/>}/>
+          <Route path= "/pokemon" element= { <CreatedPokemon />}/>
+          <Route path= "/pokemon_trainer" element= { <CreatedPokemonTrainers/>}/>
         </Routes>
       </Router>
         {/* <NameAndGender/>

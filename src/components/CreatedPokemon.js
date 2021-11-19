@@ -25,13 +25,20 @@ const CreatedPokemon= () =>{
             }
         }
 
+        function editPokemon(){
+            return console.log(`Editing ${char.name}`)
+        }
+        function deletePokemon(){
+            return console.log(`Deleting ${char.name}!`)
+        }
+
         return(
           <div>
               <p>Name: {char.name}</p>
               <p>Type: {char.pokemon_type}</p>
               <p> {owned()} </p>
-              <button onClick="">Edit</button>
-              <button>Delete</button>
+              <button onClick= {editPokemon}>Edit</button>
+              <button onClick= {deletePokemon}>Delete</button>
               <hr></hr>
           </div>
           )
