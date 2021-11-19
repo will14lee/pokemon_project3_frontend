@@ -30,7 +30,7 @@ const CreatedPokemon= () =>{
               <p>Name: {char.name}</p>
               <p>Type: {char.pokemon_type}</p>
               <p> {owned()} </p>
-              <button>Edit</button>
+              <button onClick="">Edit</button>
               <button>Delete</button>
               <hr></hr>
           </div>

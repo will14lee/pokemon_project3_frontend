@@ -1,29 +1,31 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import NameAndGender from './components/NameAndGender';
-import StartJourney from './components/StartJourney';
-import FirstPokemon from './components/FirstPokemon';
-import Farewell from './components/Farewell';
-import Home from './components/Home';
-import CreatedPokemon from './components/CreatedPokemon';
+import './App.css'
+import Home from './components/Home'
+import CreatedPokemon from './components/CreatedPokemon'
 import CreatedPokemonTrainers from './components/CreatedPokemonTrainers'
+// import NewGame from './components/NewGame'
+// import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Hi from './components/Hi';
+
 
 function App() {
   return (
     <div>
-      <Navbar />
-      {/* <Switch>
-      </Switch> */}
-        {/* <Route exact path= "/" component= { Home }/> */}
-        {/* <Route exact path= "/created_pokemon" component= { CreatedPokemon }/> */}
-        {/* <Route exact path= "/created_pokemon_trainers" components= { CreatedPokemonTrainers}/> */}
-        <NameAndGender/>
+      {/* <Navbar /> */}
+      <Router>
+        <Routes>
+          <Route path= "/" element= { <Home/> }/>
+          <Route path= '/new_game' element= {<CreatedPokemon/>}/>
+          {/* <Route path= "/new_game" element= { <Home/> }/> */}
+          {/* <Route path= "/new_game" element= { <Hi/> }/> */}
+          <Route path= "/created_pokemon" element= { <CreatedPokemon />}/>
+          <Route path= "/created_pokemon_trainers" element= { <CreatedPokemonTrainers/>}/>
+        </Routes>
+      </Router>
+        {/* <NameAndGender/>
         <StartJourney/>
         <FirstPokemon/>
-        <Farewell/>
-        <Home/>
-        <CreatedPokemon/>
-        <CreatedPokemonTrainers/>
+        <Farewell/> */}
     </div>
 
   );
