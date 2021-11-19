@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Link } from 'react-router-dom';
+import { Link, Router} from 'react-router-dom';
 
 // const Navbar= () =>{
 //     return(
@@ -14,17 +14,14 @@ import { Router, Link } from 'react-router-dom';
   
 const Navbar = () => {
     return (
-    //   <div>
-    <Router>
-        <nav>
-            {/* <p>Hey</p> */}
-          <Link to="/">Home</Link>
-          {/* <Link to="books">Books</Link>
-          <Link to="authors">Authors</Link>
-          <Link to="authors/new">Create Author</Link> */}
-        </nav>
-    </Router>
-    //   </div>
+      <nav>
+        <ul>
+          <li><a href= "http://localhost:3000/">Home</a></li>
+          <li><a href= "http://localhost:3000/new_game">New Game</a></li>
+          <li><a href= "http://localhost:3000/created_pokemon">Created Pokemon</a></li>
+          <li><a href= "http://localhost:3000/created_pokemon_trainers">Created Pokemon Trainers</a></li>
+        </ul>
+      </nav>
     )
   }
 

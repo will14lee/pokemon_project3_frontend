@@ -1,17 +1,17 @@
 import './App.css'
+import React from "react"
 import Home from './components/Home'
 import CreatedPokemon from './components/CreatedPokemon'
 import CreatedPokemonTrainers from './components/CreatedPokemonTrainers'
 import NewGame from './components/NewGame'
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Hi from './components/Hi';
 
 
 function App() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <Router>
         <Routes>
           <Route path= "/" element= { <Home/> }/>
