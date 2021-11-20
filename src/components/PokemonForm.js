@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
+import { baseUrl } from "../globals";
 
-const PokemonMaker =()=> {
+
+
+const PokemonForm =()=> {
     const [yourPokeName, setYourPokeName]= useState([])
     const [yourPokeType, setYourPokeType]= useState("")
     const [yourLevel, setYourLevel]= useState("")
-    const [yourOwnership, setYourOwnership]= useState("")
     const [yourPokeTrainerId, setYourPokeTrainerId]= useState("")
 
     function handleSubmitPokemon(e) {
@@ -13,11 +15,9 @@ const PokemonMaker =()=> {
           name: yourPokeName,
           pokemon_type: yourPokeType,
           level: yourLevel,
-          pokemon_trainer_id: yourPokeTrainerId,
-          owned_by_trainer: yourOwnership
-
+          pokemon_trainer_id: yourPokeTrainerId
         }
-        fetch("http://localhost:9292/pokemon_trainers", {
+        fetch(`${baseUrl}/pokemons`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -31,25 +31,25 @@ const PokemonMaker =()=> {
             setYourPokeType("")
             setYourLevel("")
             setYourPokeTrainerId("")
-            setYourOwnership("")
             alert("Your Pokemon Has Been Submitted!")
         })
     }
     return(
         <div className="App">
-        <p>Now, please choose one of these Pokemon to help you on your journey!</p>
-        <p>I want... 
-        {/* <input></input> */}
-        <select onChange={(e)=>setYourPokeName(e.target.value.name)}>
+        <p>Create a Pokemon</p>
+        <p>
+        <label>Name</label><input onChange={(e)=>setYourPokeName(e.target.value)}/>
+        <label>Type</label><select onChange={(e)=>setYourPokeType(e.target.value)}>
             <option value="---------">---------</option>
             <option value="Fire">Fire-Type</option>
             <option value="Water">Water-Type</option>
             <option value="Grass">Grass-Type</option>
         </select>
         </p>
-        <p><button>Submit</button></p>
+        <label>Level(1-100)</label><input onChange={(e)=>{setYourLevel(e.target.value)}}/>
+        <p><button onClick={handleSubmitPokemon}>Submit</button></p>
         </div>
     );
 }
 
-export default PokemonMaker;
+export default PokemonForm;

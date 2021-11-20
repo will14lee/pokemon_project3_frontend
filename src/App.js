@@ -3,9 +3,10 @@ import React from "react"
 import Home from './components/Home'
 import Pokemons from './components/Pokemons'
 import Trainers from './components/Trainers'
-import Intro from './components/NewGame'
+import TrainerForm from './components/TrainerForm'
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PokemonForm from './components/PokemonForm'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Navbar />
         <Routes>
           <Route path= "/" element= { <Home/> }/>
-          <Route path= '/adventure' element= {<Intro/>}/>
+          <Route path= '/trainers/new' element= {<TrainerForm/>}/>
+          <Route path= "/pokemons/new" element= { <PokemonForm />}/>
           <Route path= "/pokemons" element= { <Pokemons />}/>
           <Route path= "/trainers" element= { <Trainers/>}/>
         </Routes>

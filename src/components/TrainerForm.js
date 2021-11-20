@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
+// import { Route, Routes } from 'react-router'
+import { baseUrl } from "../globals";
 
-const NameAndGender = () => {
+const TrainerForm = () => {
     const [yourName, setYourName]= useState("")
     const [yourGender, setYourGender]= useState("")
-    function handleChange(t){
-        return console.log(t)
-    }
     
     function handleSubmitTrainer(e) {
         e.preventDefault();
@@ -13,7 +12,7 @@ const NameAndGender = () => {
           name: yourName,
           gender: yourGender
         }
-        fetch("http://localhost:9292/pokemon_trainers", {
+        fetch(`${baseUrl}/pokemon_trainers`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -26,9 +25,8 @@ const NameAndGender = () => {
             setYourName("")
             setYourGender("")
             alert("Your Trainer Has Been Submitted!")
-        })
+            })
     }
-    // const {yourGender, setYourGender}= useState("---------")
     return (
     <div className="App">
     <header className= "header">
@@ -54,4 +52,4 @@ const NameAndGender = () => {
 }
 
 
-export default NameAndGender
+export default TrainerForm
