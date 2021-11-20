@@ -20,6 +20,7 @@ const Pokemons= () =>{
               <p>Name: {char.name}</p>
               <p>Level: {char.level}</p>
               <p>Type: {char.pokemon_type}</p>
+              {/* <p>Trainer: {char.pokemon_trainer[0]}</p> */}
               <button><NavLink to ={`/pokemons/${char.id}`}>Pokemon Details</NavLink></button>
               <hr></hr>
           </div>

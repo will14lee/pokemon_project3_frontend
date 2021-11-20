@@ -10,7 +10,7 @@ const Trainers = () => {
         fetch(`${baseUrl}/pokemon_trainers`)
         .then(resp=> resp.json())
         .then(data=> setPokemonTrainer(data))
-    },[]
+    },[pokemonTrainer]
     )
         
     function PokemonTrainerForm(char){
@@ -28,8 +28,7 @@ const Trainers = () => {
                 <p>Name: {char.name}</p>
                 <p>Gender: {char.gender}</p>
                 <p>Pokemon: {char.pokemons.map(t=> t.name + " ")}</p>
-                <button><NavLink to ={`/trainers/${char.id}/edit`}>Edit Trainer</NavLink></button>
-                <button onClick={deletePokemonTrainer}>Delete</button>
+                <button><NavLink to ={`/trainers/${char.id}`}>Trainer Details</NavLink></button>
                 <hr></hr>
             </div>
             )
