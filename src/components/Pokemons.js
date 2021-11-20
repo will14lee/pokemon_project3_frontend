@@ -1,5 +1,5 @@
-import React from "react";
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from "react";
+import { useParams, NavLink }from 'react-router-dom'
 import { baseUrl } from "../globals";
 
 
@@ -16,14 +16,14 @@ const Pokemons= () =>{
         
         const ptId= char.pokemon_trainer_id
         
-        function owned(){
-            if (ptId) {
-                return  <p>Owned by Trainer</p>                  
-            }
-            else {
-                return  <p>Not owned by Trainer</p>                  
-            }
-        }
+        // function owned(){
+        //     if (ptId) {
+        //         return  <p>Owned by Trainer</p>                  
+        //     }
+        //     else {
+        //         return  <p>Not owned by Trainer</p>                  
+        //     }
+        // }
 
         function editPokemon(){
             return console.log(`Editing ${char.name}`)
@@ -36,8 +36,8 @@ const Pokemons= () =>{
           <div>
               <p>Name: {char.name}</p>
               <p>Type: {char.pokemon_type}</p>
-              <p> {owned()} </p>
-              <button onClick= {editPokemon}>Edit</button>
+              <NavLink to ={`/pokemons${char.id}/edit`}>Edit Pokemon</NavLink>
+              <NavLink to ={`/pokemons${char.id}/pokemon/new`}>Create Pokemon</NavLink>
               <button onClick= {deletePokemon}>Delete</button>
               <hr></hr>
           </div>
