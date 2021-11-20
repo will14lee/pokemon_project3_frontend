@@ -39,7 +39,8 @@ const TrainerForm = () => {
     <h3>Professor Pine: What is your name young lad?</h3>
     <p>You: My name is ... <input placeholder= "Red" onChange={(e)=>setYourName(e.target.value)} value={yourName}/> </p>
     <p>Professor Pine: Please tell me, what gender are you? </p>
-    <p>  I am a <select value= {yourGender} onChange={(e)=>{setYourGender(e.target.value)}}>
+    <p>  
+        I am a <select value= {yourGender} onChange={(e)=>{setYourGender(e.target.value)}}>
         <option value="---------">---------</option>
         <option value="Boy">Boy</option>
         <option value="Girl">Girl</option>
