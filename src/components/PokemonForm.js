@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { baseUrl } from "../globals";
+import { useNavigate } from 'react-router';
 
 
 
@@ -8,7 +9,7 @@ const PokemonForm =()=> {
     const [yourPokeType, setYourPokeType]= useState("")
     const [yourLevel, setYourLevel]= useState("")
     const [yourPokeTrainerId, setYourPokeTrainerId]= useState("")
-
+    const navigate= useNavigate()
     function handleSubmitPokemon(e) {
         e.preventDefault();
         const form={
@@ -28,25 +29,28 @@ const PokemonForm =()=> {
         .then(resp=> resp.json())
         .then(resp=> {console.log(resp)
             setYourPokeName("")
-            setYourPokeType("")
+            setYourPokeType("---------")
             setYourLevel("")
             setYourPokeTrainerId("")
             alert("Your Pokemon Has Been Submitted!")
         })
+        navigate("../pokemons", {replace: true})
     }
+
     return(
         <div className="App">
         <p>Create a Pokemon</p>
         <p>
-        <label>Name</label><input onChange={(e)=>setYourPokeName(e.target.value)}/>
-        <label>Type</label><select onChange={(e)=>setYourPokeType(e.target.value)}>
+        <label>Name</label><input value= {yourPokeName} onChange={(e)=>setYourPokeName(e.target.value)}/>
+        <label>Type</label><select value= {yourPokeType} onChange={(e)=>setYourPokeType(e.target.value)}>
             <option value="---------">---------</option>
             <option value="Fire">Fire-Type</option>
             <option value="Water">Water-Type</option>
             <option value="Grass">Grass-Type</option>
         </select>
         </p>
-        <label>Level(1-100)</label><input onChange={(e)=>{setYourLevel(e.target.value)}}/>
+        <input placeholder= "Level(1-100)" value={yourLevel} onChange={(e)=>{setYourLevel(e.target.value)}}/>
+        <p>Trainer Id<input onChange={(e)=>setYourPokeTrainerId(e.target.value)}/></p>
         <p><button onClick={handleSubmitPokemon}>Submit</button></p>
         </div>
     );

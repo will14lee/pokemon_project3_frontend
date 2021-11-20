@@ -10,35 +10,17 @@ const Pokemons= () =>{
         fetch(`${baseUrl}/pokemons`)
         .then(resp => resp.json())
         .then(data =>setPokemon(data))
-    },[])
+    },[pokemon])
 
     function PokemonForm(char){
-        
-        const ptId= char.pokemon_trainer_id
-        
-        // function owned(){
-        //     if (ptId) {
-        //         return  <p>Owned by Trainer</p>                  
-        //     }
-        //     else {
-        //         return  <p>Not owned by Trainer</p>                  
-        //     }
-        // }
-
-        function editPokemon(){
-            return console.log(`Editing ${char.name}`)
-        }
-        function deletePokemon(){
-            return console.log(`Deleting ${char.name}!`)
-        }
 
         return(
           <div>
+              <p>ID: {char.id} </p>
               <p>Name: {char.name}</p>
+              <p>Level: {char.level}</p>
               <p>Type: {char.pokemon_type}</p>
-              <NavLink to ={`/pokemons${char.id}/edit`}>Edit Pokemon</NavLink>
-              <NavLink to ={`/pokemons${char.id}/pokemon/new`}>Create Pokemon</NavLink>
-              <button onClick= {deletePokemon}>Delete</button>
+              <button><NavLink to ={`/pokemons/${char.id}`}>Pokemon Details</NavLink></button>
               <hr></hr>
           </div>
           )

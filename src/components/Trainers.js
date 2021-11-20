@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
 import { baseUrl } from '../globals';
+import { NavLink } from 'react-router-dom';
 
 const Trainers = () => {
     const [pokemonTrainer, setPokemonTrainer]= useState([])
@@ -23,12 +24,11 @@ const Trainers = () => {
         }        
         return(
             <div>
+                <p>ID: {char.id} </p>
                 <p>Name: {char.name}</p>
                 <p>Gender: {char.gender}</p>
                 <p>Pokemon: {char.pokemons.map(t=> t.name + " ")}</p>
-                <button onClick={editPokemonTrainer}>Edit</button>
-                <button id={char.id} onClick={editPokemonTrainer}>Edit</button>
-
+                <button><NavLink to ={`/trainers/${char.id}/edit`}>Edit Trainer</NavLink></button>
                 <button onClick={deletePokemonTrainer}>Delete</button>
                 <hr></hr>
             </div>
