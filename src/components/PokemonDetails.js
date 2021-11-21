@@ -34,10 +34,6 @@ const PokemonDetails= () =>{
     }
 
     function PokemonForm(char){
-        
-        function editPokemon(){
-            return console.log(`Editing ${char.name}`)
-        }
 
         return(
           <div>

@@ -13,15 +13,7 @@ const Trainers = () => {
     },[pokemonTrainer]
     )
         
-    function PokemonTrainerForm(char){
-        function editPokemonTrainer(e){
-            return console.log(`Editing ${e.target.id}`)
-        }
-
-        function deletePokemonTrainer(e)
-        {
-            return console.log(`Deleting ${char.name}!`)
-        }        
+    function PokemonTrainerForm(char){ 
         return(
             <div>
                 <p>ID: {char.id} </p>

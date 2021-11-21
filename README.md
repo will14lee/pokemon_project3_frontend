@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Pokemon and Pokemon Trainer Creator 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Hello and welcome to the Pokemon and Pokemon Trainer Creator application. This app is connected to the Pokemon and Pokemon Trainer Ruby Database.
 
-## Available Scripts
+## Routes
+The Routes for this app includes the Home page, the Trainer/Pokemon Creator page, Pokemons/Trainers page, the Trainer/Pokemon Details page, and the Trainer/Pokemon Edit page. 
 
-In the project directory, you can run:
+The Home page, Trainer/Pokemon Creator, and the Pokemons/Trainers page can all be accessed with the NavBar at the top of the application. 
 
-### `yarn start`
+The Trainer/Pokemon Detailscan be accessed through both the Trainers and Pokemons pages respectively through the details button. The Trainer/Pokemon Edit page can then be accessed through the Trainer/Pokemon Edit page through the edit button.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Application Details
+In this app you are able to create a Pokemon by inputing its name, selecting a type from a dropdown menu, inputing a Pokemon Trainer id, and inputing a level. After submitting the Pokemon you will be redirected to the Pokemons page. On this page you will see the assigned name, level, type, and if they are owned by a Trainer. If you go to the Pokemon Details you will be able to edit or delete the Pokemon. If you click edit you will be able to change the Pokemon's trainer, level, name, and type. After clicking submit you will be redirected to the Pokemon Details page. If you click the delete button the trainer will be deleted from the list and database and you will be redirected to the Pokemons page.
 
-### `yarn test`
+For the Trainers you will be able to create a Trainer by inputing their name and choosing their gender. After doing so you will be redirected to the Trainers page which displays all the Trainer names, genders, and current Pokemons. On this page you can view the Pokemon's details by clicking the corresponding button. You will then be able to press the edit or delete button on the details page. The edit button allows you to edit the Trainer by changing their name and gender. After clicking submit you will be redirected to the Trainer's detail page. For the delete button you will be able to delete the Trainer which will remove the trainer from the database and list. It will also redirect you back to the Trainers page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Where to Find Database
+To find the frontend for this application please go to: https://github.com/will14lee/phase-3-sinatra-react-project

@@ -14,7 +14,7 @@ const TrainerDetails= () =>{
         fetch(`${baseUrl}/pokemon_trainers/${id}`)
         .then(resp => resp.json())
         .then(data =>setTrainer(data))
-    },[trainer])
+    },[])
 
     function deleteTrainer(e) {
         e.preventDefault();
